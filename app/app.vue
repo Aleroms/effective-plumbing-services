@@ -14,7 +14,7 @@ const title2 = title + ' | South Orange County Plumber (C-36 Licensed)'
 const description
   = 'Licensed C-36 plumbing contractor in South Orange County offering residential and emergency plumbing, drain cleaning, water heater & sewer services.'
 
-const items = computed<NavigationMenuItem[]>(() => [
+const navItems = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Services',
     to: '/services',
@@ -64,14 +64,14 @@ useSeoMeta({
 
       <template #right>
         <UNavigationMenu
-          :items="items"
+          :items="navItems"
           class="hidden lg:flex"
         />
       </template>
 
       <template #body>
         <UNavigationMenu
-          :items="items"
+          :items="navItems"
           orientation="vertical"
         />
       </template>
@@ -85,20 +85,59 @@ useSeoMeta({
 
     <UFooter>
       <template #left>
-        <p class="text-sm text-muted">
-          Built with Nuxt UI • © {{ new Date().getFullYear() }}
-        </p>
-      </template>
-
-      <template #right>
         <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
+          to="https://www.facebook.com/profile.php?id=61587620072002"
           target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
+          icon="i-simple-icons-facebook"
+          aria-label="Facebook"
           color="neutral"
           variant="ghost"
         />
+        <UButton
+          to="https://www.facebook.com/profile.php?id=61587620072002"
+          target="_blank"
+          icon="i-simple-icons-instagram"
+          aria-label="Instagram"
+          color="neutral"
+          variant="ghost"
+        />
+        <UButton
+          to="https://www.yelp.com/biz/effective-plumbing-services-mission-viejo-2"
+          target="_blank"
+          icon="i-simple-icons-yelp"
+          aria-label="Instagram"
+          color="neutral"
+          variant="ghost"
+        />
+        <UButton
+          to="https://www.thumbtack.com/ca/mission-viejo/affordable-plumbing-services/effective-plumbing-services-corporation/service/443470001512144916"
+          target="_blank"
+          icon="i-simple-icons-thumbtack"
+          aria-label="Instagram"
+          color="neutral"
+          variant="ghost"
+        />
+      </template>
+      <template #right>
+        <p class="text-sm text-muted">
+          Copyright © {{ new Date().getFullYear() }} Effective Plumbing Services Corporation. - All Rights Reserved.
+        </p>
+      </template>
+      <template #bottom>
+        <div class="py-4 flex justify-center">
+          <p class="text-xs text-gray-400 flex items-center gap-1.5">
+            Designed by
+            <UButton
+              to="https://santiagomorales.dev"
+              target="_blank"
+              variant="link"
+              size="xs"
+              class="text-gray-300 hover:text-white p-0"
+            >
+              SantiagoSites
+            </UButton>
+          </p>
+        </div>
       </template>
     </UFooter>
   </UApp>
