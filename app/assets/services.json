@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "i-lucide-droplet-off",
+    "title": "Residential Leak Detection",
+    "description": "Using advanced detection equipment, we pinpoint hidden leaks in walls, foundations, and underground pipes—saving you from extensive water damage, mold growth, and inflated utility bills."
+  },
+  {
+    "icon": "i-lucide-wrench",
+    "title": "Drain Backups & Clogs",
+    "description": "Stubborn clogs and sewer backups can disrupt your daily routine. We use professional-grade tools including hydro-jetting and drain cameras to clear blockages and identify underlying issues."
+  },
+  {
+    "icon": "i-lucide-tool-case",
+    "title": "Plumbing Service & Repair",
+    "description": "Whether it's a dripping faucet, running toilet, or broken pipe, our experienced technicians diagnose and repair plumbing problems efficiently with upfront pricing and quality workmanship."
+  },
+  {
+    "icon": "i-lucide-heater",
+    "title": "Water Heater Services",
+    "description": "No hot water? We service all brands and types—tank, tankless, gas, and electric. From routine maintenance to full replacements, we ensure reliable hot water year-round."
+  },
+  {
+    "icon": "i-lucide-shower-head",
+    "title": "Shower Valve Repair & Replacement",
+    "description": "Inconsistent water temperature or weak pressure? We repair and replace faulty shower valves, cartridges, and mixing valves to restore a comfortable, safe showering experience."
+  },
+  {
+    "icon": "i-lucide-bath",
+    "title": "Tub & Fixture Repairs",
+    "description": "Leaky faucets, outdated fixtures, or a cracked tub can affect both function and aesthetics. We repair, replace, and upgrade bathroom and kitchen fixtures to modern standards."
+  }
+]
