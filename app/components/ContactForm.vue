@@ -8,6 +8,7 @@
     <UFormField
       label="Email"
       name="email"
+      netlify
     >
       <UInput
         v-model="state.email"
