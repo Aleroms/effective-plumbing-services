@@ -3,8 +3,14 @@
     :schema="schema"
     :state="state"
     class="space-y-4"
+    data-netlify="true"
     @submit="onSubmit"
   >
+    <input
+      type="hidden"
+      name="form-name"
+      value="contact"
+    >
     <UFormField
       label="Email"
       name="email"
@@ -65,6 +71,12 @@ const toast = useToast()
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
+
+  // reset the state
+  state.email = undefined
+  state.message = undefined
+  state.name = undefined
+
   console.log(event.data)
 }
 </script>
