@@ -85,7 +85,8 @@ async function onSubmit() {
   try {
     await fetch('/', {
       method: 'POST',
-      body: formData
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
     })
     toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
 
