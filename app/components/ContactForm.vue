@@ -4,17 +4,18 @@
     :state="state"
     class="space-y-4"
     data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    v-bind="({ name: 'contact-form' } as any)"
     @submit="onSubmit"
   >
     <input
       type="hidden"
       name="form-name"
-      value="contact"
+      value="contact-form"
     >
     <UFormField
       label="Email"
       name="email"
-      netlify
     >
       <UInput
         v-model="state.email"
