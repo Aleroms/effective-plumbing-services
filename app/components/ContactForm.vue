@@ -1,101 +1,105 @@
 <template>
+  <!-- Hidden HTML form for Netlify to detect at build time -->
   <form
     name="contact-form"
-    method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    class="space-y-4"
-    @submit.prevent="onSubmit"
+    hidden
   >
     <input
-      type="hidden"
-      name="form-name"
-      value="contact-form"
+      type="text"
+      name="name"
     >
-    <p hidden>
-      <label>Don't fill this out: <input name="bot-field"></label>
-    </p>
-    <div class="flex flex-col gap-1">
-      <label
-        for="email"
-        class="text-sm font-medium"
-      >Email</label>
-      <input
-        id="email"
+    <input
+      type="email"
+      name="email"
+    >
+    <textarea name="message" />
+  </form>
+
+  <UForm
+    :schema="schema"
+    :state="state"
+    class="space-y-4"
+    @submit="onSubmit"
+  >
+    <UFormField
+      label="Email"
+      name="email"
+    >
+      <UInput
         v-model="state.email"
-        type="email"
-        name="email"
-        required
-        class="w-xs rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-      >
-    </div>
-    <div class="flex flex-col gap-1">
-      <label
-        for="name"
-        class="text-sm font-medium"
-      >Name</label>
-      <input
-        id="name"
+        class="w-xs"
+      />
+    </UFormField>
+    <UFormField
+      label="Name"
+      name="name"
+    >
+      <UInput
         v-model="state.name"
         type="text"
-        name="name"
-        required
-        class="w-xs rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-      >
-    </div>
-    <div class="flex flex-col gap-1">
-      <label
-        for="message"
-        class="text-sm font-medium"
-      >Message</label>
-      <textarea
-        id="message"
-        v-model="state.message"
-        name="message"
-        required
-        rows="4"
-        class="w-xs rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+        class="w-xs"
       />
-    </div>
-    <button
-      type="submit"
-      class="rounded-md bg-primary-500 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+    </UFormField>
+    <UFormField
+      label="Message"
+      name="message"
     >
+      <UTextarea
+        v-model="state.message"
+        class="w-xs"
+      />
+    </UFormField>
+    <UButton type="submit">
       Submit
-    </button>
-  </form>
+    </UButton>
+  </UForm>
 </template>
 
 <script lang="ts" setup>
-const state = reactive({
-  email: '',
-  name: '',
-  message: ''
+import * as z from 'zod'
+import type { FormSubmitEvent } from '@nuxt/ui'
+
+const schema = z.object({
+  email: z.string().email('Invalid email'),
+  name: z.string().min(1, 'Name is required'),
+  message: z.string().min(1, 'Message is required')
+})
+
+type Schema = z.output<typeof schema>
+
+const state = reactive<Partial<Schema>>({
+  email: undefined,
+  name: undefined,
+  message: undefined
 })
 
 const toast = useToast()
 
-async function onSubmit() {
+async function onSubmit(event: FormSubmitEvent<Schema>) {
   const formData = new FormData()
   formData.append('form-name', 'contact-form')
-  formData.append('email', state.email)
-  formData.append('name', state.name)
-  formData.append('message', state.message)
+  formData.append('email', event.data.email)
+  formData.append('name', event.data.name)
+  formData.append('message', event.data.message)
 
   try {
     await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       body: new URLSearchParams(formData as any).toString()
     })
     toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
 
     // reset the state
-    state.email = ''
-    state.name = ''
-    state.message = ''
+    state.email = undefined
+    state.name = undefined
+    state.message = undefined
   } catch (error) {
     toast.add({ title: 'Error', description: 'Failed to submit form.', color: 'error' })
+    console.log(error)
   }
 }
 </script>
