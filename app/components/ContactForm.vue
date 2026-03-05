@@ -3,6 +3,7 @@
     :schema="schema"
     :state="state"
     class="space-y-4"
+    method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     v-bind="({ name: 'contact-form' } as any)"
