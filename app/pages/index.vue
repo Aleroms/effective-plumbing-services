@@ -36,7 +36,7 @@ import services from '@/assets/services.json'
       orientation="horizontal"
       reverse
       title="Expert Plumbing Services"
-      headline="Servicing Orange County since 2001"
+      headline="Servicing Orange County since 2008"
     >
       <template #description>
         <p>Offering dependable plumbing services across South Orange County. With decades of hands-on experience, we help homeowners avoid costly damage and unexpected repairs.</p>
@@ -74,10 +74,10 @@ import services from '@/assets/services.json'
             <div class="space-y-8">
               <div>
                 <h3 class="text-xl font-semibold mb-2">
-                  Family-Owned Since 2001
+                  Family-Owned Since 2020
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400">
-                  For over 20 years, we've proudly served South Orange County homeowners with honest, dependable service. Our experience ensures every job is handled with care and attention to detail.
+                  For over 6 years, we've proudly served South Orange County homeowners with honest, dependable service. Our experience ensures every job is handled with care and attention to detail.
                 </p>
               </div>
 

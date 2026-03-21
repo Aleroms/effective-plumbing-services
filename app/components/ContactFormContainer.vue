@@ -45,8 +45,9 @@
               Hours
             </h3>
             <div class="space-y-1 text-gray-600 dark:text-gray-400">
-              <p>Monday - Friday: 7:00 AM - 5:00 PM</p>
-              <p>Saturday/Sunday: Closed</p>
+              <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+              <p>Saturday: 7:00 AM - 2:00 PM</p>
+              <p>Sunday: Closed</p>
               <p>Closed major holidays</p>
               <p class="text-sm text-primary mt-2">
                 24/7 Emergency Service Available
