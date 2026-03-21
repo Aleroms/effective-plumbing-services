@@ -16,7 +16,7 @@ const items = ref<AccordionItem[]>([
   },
   {
     label: 'What areas do you serve?',
-    content: 'We proudly serve South Orange County and surrounding areas, including Mission Viejo, Laguna Niguel, San Juan Capistrano, Dana Point, Ladera Ranch, and Rancho Santa Margarita.'
+    content: 'We proudly serve South Orange County and surrounding areas, including Mission Viejo, Laguna Niguel, Irvine, San Juan Capistrano, Dana Point, Ladera Ranch, Trabuco Canyon, Silverado, Foothill Ranch and Rancho Santa Margarita.'
   },
   {
     label: 'Are you licensed and insured?',
@@ -28,7 +28,11 @@ const items = ref<AccordionItem[]>([
   },
   {
     label: 'What payment methods do you accept?',
-    content: 'We accept all major credit cards, checks, and cash. Payment is due upon completion of the work unless other arrangements have been made in advance.'
+    content: 'We accept all major credit cards, zello, venmo, and cash. Payment is due upon completion of the work unless other arrangements have been made in advance.'
+  },
+  {
+    label: 'Do you provide parts?',
+    content: 'Yes, or you can provide the parts and we\'ll install them for you.'
   }
 ])
 </script>
