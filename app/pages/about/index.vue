@@ -8,7 +8,7 @@
     >
       <div class="flex justify-center">
         <NuxtImg
-          src="https://scontent-lax3-1.cdninstagram.com/v/t39.30808-6/559133853_122146447784757273_1354492621437949740_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=MzczNTQ2NzI3Nzg3Nzg5MjAzOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjUxOXg1NzYuc2RyLkMzIn0%3D&_nc_ohc=7oC5ZleowKcQ7kNvwEOamqb&_nc_oc=Adn6uULcjdPNvIw6q_sjY6a0IfVCLv8HMT-YM9SOzKTJdjTkXevU8tMZ0cmuZAOjy50xrIhOdIXqfbVYrgPppu3d&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=jdo-Ljh3K6_mNbA6fUqwfw&oh=00_Aftj5RUE5k6R7dHrrqPGLWjm76uXP1gFNZ4lzjU9czN_NQ&oe=699C784F"
+          src="aboutPic.jpg"
           format="webp"
           width="400"
           height="350"

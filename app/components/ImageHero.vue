@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-cover bg-center bg-no-repeat"
+    class="relative bg-cover bg-center bg-no-repeat dark"
     :style="{ backgroundImage: `url(${imagePath})` }"
   >
     <div class="absolute inset-0 bg-black/60" />

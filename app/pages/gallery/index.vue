@@ -85,54 +85,49 @@ const galleryImages = ref<GalleryImage[]>([
     caption: 'Water Heater Installation'
   },
   {
-    src: '/faucet.jpg',
-    alt: 'Faucet repair',
-    caption: 'Faucet Installation & Repair'
+    src: '/gallery/IMG_0018.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/serviceArea.png',
-    alt: 'Service area map',
-    caption: 'South Orange County Service Area'
+    src: '/gallery/IMG_0019.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/pipes/pipe.jpg',
-    alt: 'Professional pipe installation',
-    caption: 'Copper Pipe Installation'
+    src: '/gallery/IMG_0021.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/pipes/pipe4.jpg',
-    alt: 'Plumbing system maintenance',
-    caption: 'System Maintenance'
+    src: '/gallery/IMG_0205.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/pipes/pipe2.jpg',
-    alt: 'Pipe repair work',
-    caption: 'Pipe Repair & Replacement'
+    src: '/gallery/IMG_0207.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/pipes/pipe5.jpg',
-    alt: 'New plumbing installation',
-    caption: 'New Construction Plumbing'
+    src: '/gallery/IMG_0208.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/pipes/water-heater.jpg',
-    alt: 'Water heater installation',
-    caption: 'Water Heater Installation'
+    src: '/gallery/IMG_0334.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/bathtub.jpg',
-    alt: 'Bathtub installation',
-    caption: 'Bathroom Fixtures'
+    src: '/gallery/IMG_0336.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   },
   {
-    src: '/serviceArea.png',
-    alt: 'Service area map',
-    caption: 'South Orange County Service Area'
-  },
-  {
-    src: '/faucet.jpg',
-    alt: 'Faucet repair',
-    caption: 'Faucet Installation & Repair'
+    src: '/gallery/IMG_0352.jpg',
+    alt: 'Plumbing project',
+    caption: 'Recent Project'
   }
 ])
 </script>
